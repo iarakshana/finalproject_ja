@@ -1,6 +1,8 @@
 # finalproject_ja
 Final Project - Julia and Adriana
+
 Proposal Question
+
 We want to explore the relationship between a candidate’s online presence (here represented
 by Google Trend data) and the actual percentage of the vote received by each candidate.
 Initially we were hoping to use social media data from either Facebook or Reddit but it was a bit
@@ -13,7 +15,9 @@ candidate. While this data may be misleading for incumbents since they have a ma
 advantage regardless of online presence, this analysis could prove informative when it comes to
 candidates running multiple times in the same district who have to consider how much
 increasing their online presence will realistically increase their odds of being elected.
+
 Datasets
+
 Google Trends - Google Trends shows how often a particular search-term is entered relative to
 the total search-volume across various variables, including region, time and related queries. We
 hope to input specific key terms/topics that relate to each candidate in order to find who was
@@ -29,6 +33,7 @@ region. We then hope to compare the frequency of a given candidate with the perc
 vote obtained from the FEC datasets.
 https://trends.google.com/trends/
 https://github.com/GeneralMills/pytrends
+
 Congressional Results - The Federal Election Commission (FEC) has published election
 results from every federal election up to 2014 which detail the percentage of the vote received
 by each candidate in any given congressional race. We would have to use a different dataset for
