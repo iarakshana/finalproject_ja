@@ -1,0 +1,52 @@
+import pandas as pd
+import numpy as np
+from pandas import ExcelWriter
+from pandas import ExcelFile
+
+
+df1 = pd.read_excel('2014Senate.xlsx')
+
+df_vote = df1[["GENERAL %" , "CANDIDATE NAME", "PARTY", "STATE"]]
+
+df_real_vote = df_vote[(df1["GENERAL %"]) > .01]
+
+df_2014_Senate = df_real_vote[df_real_vote["CANDIDATE NAME"].str.contains("Scattered")==False]
+
+
+df2 = pd.read_excel('2014House.xlsx')
+
+df_vote2 = df2[["GENERAL %" , "D" , "CANDIDATE NAME" , "STATE"]]
+
+df_real_vote2 = df_vote2[(df2["GENERAL %"]) > .01]
+
+df_2014_House = df_real_vote2[df_real_vote2["CANDIDATE NAME"].str.contains("Scattered")==False]
+
+
+df3 = pd.read_excel('2012.xlsx')
+
+df_vote3 = df3[["GENERAL %" , "CANDIDATE NAME" , "D" , "STATE"]]
+
+df_real_vote3 = df_vote3[(df3["GENERAL %"]) > .01]
+
+df_Sen = df_real_vote3[df_real_vote3["D"].str.contains("S")]
+
+df_House = df_real_vote3[df_real_vote3["D"].str.contains("S")==False]
+
+df_2012_Senate = df_Sen[df_Sen["CANDIDATE NAME"].str.contains("Scattered")==False]
+
+df_2012_House = df_House[df_House["CANDIDATE NAME"].str.contains("Scattered")==False]
+
+
+df4 = pd.read_excel('2010.xlsx')
+
+df_vote4 = df4[["GENERAL %" , "CANDIDATE NAME (Last, First)" , "DISTRICT" , "STATE"]]
+
+df_real_vote4 = df_vote4[(df4["GENERAL %"]) > .01]
+
+df_Senate = df_real_vote4[df_real_vote4["DISTRICT"].str.contains("S", na=False)]
+
+df_house = df_real_vote4[df_real_vote4["DISTRICT"].str.contains("S", na=False)==False]
+
+df_2010_Senate = df_Senate[df_Senate["CANDIDATE NAME (Last, First)"].str.contains("Scattered")==False]
+
+df_2010_House = df_house[df_house["CANDIDATE NAME (Last, First)"].str.contains("Scattered")==False]
