@@ -91,7 +91,23 @@ All analysis for Senate races can be found in the Correlation notebooks for each
 
 **Comparison By Year**
 
-We started our analysis with the 2014 Senate election. We wanted to see if the correlation between trend percentage and percent of the vote was strongest in the later election or in the earlier elections. We found that in 2014, there was a weak but substantially positive correlation between the percent of searches and the percent of the vote received by each candidate. 
+We started our analysis with the 2014 Senate election. We wanted to see if the correlation between trend percentage and percent of the vote was strongest in the later election or in the earlier elections. We started out by making a multiple bar plot to observe whether or not there was some similarity between the percent of the vote and the percent searched. After verifying that there was in most cases, we plotted the overall correlation between the two variables. We then performed an OLS regression and observed the residuals. All graphs can be found in the Jupyter notebooks for each year. 
+
+After doing this analysis for each year, we found a substantial difference between the strength of the correlation in any given year. We found that in 2014 ad 2012, there was a weak but substantially positive correlation between the percent of searches and the percent of the vote received by each candidate. In 2010, however, there was a very weak and much less positive correlation observed (Sad!). The p values for 2012 and 2014 were statistically significant but the one for 2010 was not. We hypothesize that this is due to the fact that in 2010 there were quite a few candidates who lost yet had a much higher search percentage, either due to them sharing a name with a popular figure or due to them being incumbents. In the 2010 Senate elections the Republicans picked up a few seats by defeating incumbents; even though the incumbents lost the election they were still searched much more than their opponents.  
+
+After plotting the residuals we noticed that they were not at all centered around 0; candidates who received less searches had really low residuals and candidates who received more searches had really high residuals. This implies that a candidate who was searched relatively often would do even better than predicted by our model (and vice versa). We can conclude that while our model did not produce a strong correlation, there is enough evidence to conclude that a higher amount of trend searches would lead to a relatively high increase in the percent of the vote obtained by any given candidate. 
+
+In every year, there were a few cases where the losing candidate shared a name with a popular figure and thus skewed the pytrends data significantly (as mentioned in the pytrends code section). This meant that we got several losing candidates with abnormally high search percentages which undoubtedly contributed to some of the outliers in our data. There were also cases where the losing candidate was popular in their own right as a business owner or philanthropist. These also contributed to the outliers and made our analysis less robust. 
 
 
 ### House 
+
+
+____________________________________________________________
+## Conclusions
+Overall, we can conclude that despite not being extensive, there is some correlation between our two variables in question, however, it is not as positive as we had expected or hoped. This might be either due to the outliers skewing the analysis or the changes in the search terms and frequency over the years analyzed. As a candidate running for office, it is worthwhile to consider how often you are being searched online as candidates who are searched more often generally outperform their opponents. However, this may not be the most effective way of guaranteeing an increased percent of the vote on Election Day. 
+
+__________________________________________________
+## Moving Forward 
+
+Moving forward it would be worthwhile to analyze a potential third variable that affects both internet searches and vote received: money. Candidates with more money in general both receive more of the vote and likely are able to get their name out more easily which would result in a higher amount of searches. If this relation is significant, then the correlation between internet searches and vote receieved would only get stronger as the years go on and the amount of money poured into our electoral system increases. Another potential area of analysis would be seeing how incumbents perform against their opponents and/or seeing how male and female candidates differ when it comes to internet searches and percent of the vote received. Performing the same analysis on more years would also prove informative as perhaps the correlation between internet search and percent of vote received is even weaker in 2008 when Citizens United had not yet been passed. 
