@@ -40,11 +40,9 @@ each election cycle but the datasets themselves are a bit more manageable.
 https://transition.fec.gov/pubrec/electionresults.shtml
 __________________________________________
 # Trending Into Office
- 
-s;dkf;sldkfjlskdf;laskjdf;lksdlfj
 
 ## Question
-asdkjf;laskdjf;lksadjf;lksj
+We wanted to test whether or not being searched on Google more than your opponent would translate into a higher percentage of the vote in the next election. We did this by analyzing Google trend data for each candidate in the period from January 1st to Election Day of the year they ran for office. We then calculated the relative amount of internet searches for each candidate compared to their opponent. This trend data was a proxy for the relative amount of online interest in any given candidate in the months leading up to the election. We then compared this with the relative percent of the vote received by each candidate to determine whether or not there was a correlation between the amount of online interest and the percent of the vote received. 
 
 ## Index
 
@@ -58,7 +56,10 @@ The combined pytrend and FEC data as well as the graphs and statistical analysis
 
 The pytrends code for both the House and Senate can be found in the Pytrends folder, and the code for the FEC data manipulation can be found in the FEC folder. 
 ____________________________________________
-## Pytrends Code
+## Pytrends 
+The pytrends code gave us the frequency of searches for any given pair of candidates we input in our list on an index of 100, i.e. how much the particular candidate is searched relative to the total search-volume of both candidates over the period of time requested.
+In order to obtain the variables we required, we created a for loop to sum these search frequencies and find a proportion of searches in comparison to the opponent candidate in the set, and thus obtained a dataframe with the index of the candidate in one column and the percentage searched in the other column.
+
 For the pytrends code, we took the names of the candidates from the FEC dataset and formed a kw_list for each state which is required for the build_payload function to run and search the trends and return the results. We initially started by running two names from each state through their own pytrend code, (ie. running pytrends for AK and then AL and then appending the two numbers obtained for each person), but soon found it to be extremely tedious to do so and knew that this would be even worse for the House Code. Hence, we created a for loop that would run through the entire list of candidates in each of the states and create a list which we converted to a dataframe with a column for the index and the percentage of searches obtained. We began using this method after 2014 and 2012 Senate had already been completed, which is why these two have code that looks substantially different. 
 
 A few problems we ran into while running the pytrends code include:
@@ -66,23 +67,31 @@ A few problems we ran into while running the pytrends code include:
 - Some candidates' names were producing errors given that their name was not quite searchable due to an errant middle initial (we removed all middle initials after a point).
 - Some candidates share names with other far more famous people, for example: James Woods, Tom Smith, etc. 
 - Some candidates went by more common names/ nick names, for example: Hank Johnson for Henry R. Johnson, Buddy Carter for E. L. Carter, etc. 
-- A number of times we would get 429 errors for running the code far too many times, we implemented a sleep to remedy this but sometimes even that would not work.
 
 ## FEC Code
+The FEC dataset was a relatively nice way to get the percent of the vote received by any given candidate. The data was provided in the form of an excel spreadsheet which was easier to use than some of the other voter data we encountered. Unfortunately, we couldn't find data for 2016 on the FEC website so we limited our analysis to the previous three elections. 
+
 For the FEC datasets, we filtered out all but the top two candidates for each race to avoid exhausting pytrends searches and our own energy. Initially this meant using a cutoff of around 17% for each Senate race but once we began using the for-loops we had to stop using cutoffs since there were some races that only had one candidate and we needed to add in some placeholder who got 0% of the vote. 
 This meant that every candidate who we didn't want included in our analysis had to be deleted from the dataset. 
 
 Another complication arose when certain states such as New York and Massachusetts had multiple parties who endorsed the same candidate and the percentage of the vote earned by that candidate was split among these parties. For example, Chuck Schumer earned 45% of the vote as a Democrat, 6% as a Green, etc. All these percentages then had to be added up in order for our analysis to be accurate.   
+_____________________________________
+## General Problems 
+
+As seen in the proposal, we were hoping to analyze the interest over region for each candidate. We were not able to obtain state/city trends data that were usable, since even after setting the 'geo' as US we would just get a list that would signify the proportion of searches that the two candidates were getting in each state. Given that they were not really being searched much outside of their home state(as expected), we stuck to just using the interest_over_time function with the pytrends. This meant that we were technically gathering data from the entire United States but overall the searched were highly concentrated in each candidate's home state so the analysis should still hold. 
+
+Another complication was that a number of times we would get 429 errors for accessing the trends data far too much. We implemented a sleep to remedy this but sometimes even that would not work. Thus, it was quite hard to consolidate the House data sets for the three years owing to the sheer volume of names that we needed for each one.
+
+_____________________________________
+## Analysis 
+
+### Senate
+
+All analysis for Senate races can be found in the Correlation notebooks for each respective year. The primary functions used were pytrends, pandas, seaborn, and statsmodels. 
+
+**Comparison By Year**
+
+We started our analysis with the 2014 Senate election. We wanted to see if the correlation between trend percentage and percent of the vote was strongest in the later election or in the earlier elections. We found that in 2014, there was a weak but substantially positive correlation between the percent of searches and the percent of the vote received by each candidate. 
 
 
-_____________________________________________
-
-Data Obtained
-The two key pieces of data we obtained through the data manipulation were the Percentage Searched, which was the proportion of total search obtained by that candidate with respect to his/her opponent from the Pytrends data and the Percentage of vote obtained from the FEC dataset.
-
-
-
-
-
-Other general pytrends problems:
-We were not able to obtain city trends data that were usable, as even after setting the 'geo' as US we would just get a list that would just signify the proportion in the state that the two candidates were from given that they were not really being searched much out of their state as expected, thus we stuck to just using the interest_over_time function with the pytrends.
+### House 
