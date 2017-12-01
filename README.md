@@ -39,14 +39,14 @@ by each candidate in any given congressional race. We would have to use a differ
 each election cycle but the datasets themselves are a bit more manageable.
 https://transition.fec.gov/pubrec/electionresults.shtml
 __________________________________________
-**#Trending Into Office**
+#Trending Into Office
  
 s;dkf;sldkfjlskdf;laskjdf;lksdlfj
 
-**##Question**
+##Question
 asdkjf;laskdjf;lksadjf;lksj
 
-**##Index**
+##Index
 
 The combined pytrend and FEC data as well as the graphs and statistical analysis can be found here:
 - 2014 Senate Correlation.ipynb
@@ -68,7 +68,7 @@ A few problems we ran into while running the pytrends code include:
 - Some candidates went by more common names/ nick names, for example: Hank Johnson for Henry R. Johnson, Buddy Carter for E. L. Carter, etc. 
 - A number of times we would get 429 errors for running the code far too many times, we implemented a sleep to remedy this but sometimes even that would not work.
 
-##**FEC Code**
+##FEC Code
 For the FEC datasets, we filtered out all but the top two candidates for each race to avoid exhausting pytrends searches and our own energy. Initially this meant using a cutoff of around 17% for each Senate race but once we began using the for-loops we had to stop using cutoffs since there were some races that only had one candidate and we needed to add in some placeholder who got 0% of the vote. 
 This meant that every candidate who we didn't want included in our analysis had to be deleted from the dataset. 
 
