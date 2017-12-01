@@ -39,34 +39,47 @@ by each candidate in any given congressional race. We would have to use a differ
 each election cycle but the datasets themselves are a bit more manageable.
 https://transition.fec.gov/pubrec/electionresults.shtml
 
+__________________________________________
+#**FINAL**
+
+__________________________________________
+##**Index**
+
+The combined pytrend and FEC data as well as the graphs and statistical analysis can be found here:
+- 2014 Senate Correlation.ipynb
+- 2012 Senate Correlation.ipynb
+- 2010 Senate Correlation.ipynb
+- 2014 House Correlation.ipynb
+- 2012 House Correlation.ipynb
+- 2010 House Correlation.ipynb
+
+The pytrends code for both the House and Senate can be found in the Pytrends folder, and the code for the FEC data manipulation can be found in the FEC folder. 
 ____________________________________________
-Index
-The jupyter files with the combined pytrend and fec code as well as the graphs made can be found based on year and whether it is for the Senate or House :
-2014 Senate Correlation.ipynb
-2012 Senate Correlation.ipynb
-2010 Senate Correlation.ipynb
+##**Pytrends Code** 
+For the pytrends code, we took the names of the candidates from the FEC dataset and formed a kw_list for each state which is required for the build_payload function to run and search the trends and return the results. We initially started by running two names from each state through their own pytrend code, (ie. running pytrends for AK and then AL and then appending the two numbers obtained for each person), but soon found it to be extremely tedious to do so and knew that this would be even worse for the House Code. Hence, we created a for loop that would run through the entire list of candidates in each of the states and create a list which we converted to a dataframe with a column for the index and the percentage of searches obtained. We began using this method after 2014 and 2012 Senate had already been completed, which is why these two have code that looks substantially different. 
 
-2014 House Correlation.ipynb
-2012 House Correlation.ipynb
-2010 House Correlation.ipynb
+A few problems we ran into while running the pytrends code include:
+- Inputting the names into the list in the appropriate format as an array with the brackets and the quotes was also quite a task initially when we attempted to do it manually. We then just assigned a string with the names and used the replace function to add the brackets and quotes.
+- Some candidates' names were producing errors given that their name was not quite searchable due to an errant middle initial (we removed all middle initials after a point).
+- Some candidates share names with other far more famous people, for example: James Woods, Tom Smith, etc. 
+- Some candidates went by more common names/ nick names, for example: Hank Johnson for Henry R. Johnson, Buddy Carter for E. L. Carter, etc. 
+- A number of times we would get 429 errors for running the code far too many times, we implemented a sleep to remedy this but sometimes even that would not work.
 
-The specific code for just pytrends can be found in the Pytrends folder for the House and Senate
-The specific code for just the FEC data manipulations can be found in the FEC folder.
-____________________________________________
+##**FEC Code**
+For the FEC datasets, we filtered out all but the top two candidates for each race to avoid exhausting pytrends searches and our own energy. Initially this meant using a cutoff of around 17% for each Senate race but once we began using the for-loops we had to stop using cutoffs since there were some races that only had one candidate and we needed to add in some placeholder who got 0% of the vote. 
+This meant that every candidate who we didn't want included in our analysis had to be deleted from the dataset. 
 
-For the pytrends code, we took the names of the candidates from the FEC dataset and formed kw_list which is required for the build_payload function to run and search the trends and return the results. We initially started by running the two names from each state for the Senate years through it's own pytrend code, (ie. running pytrends for AK and then AL and then appending the two numbers obtained for each person), but soon found it to be extremely tedious to do so and knew that this would be even more so for the House Code. Hence, we created a for loop that would run through the entire list of candidates in each of the states and create a list which we converted to a dataframe with a column for the index and the percentage of searches obtained.
+Another complication arose when certain states such as New York and Massachusetts had multiple parties who endorsed the same candidate and the percentage of the vote earned by that candidate was split among these parties. For example, Chuck Schumer earned 45% of the vote as a Democrat, 6% as a Green, etc. All these percentages then had to be added up in order for our analysis to be accurate.   
 
-A few problems we ran into whilst running the pytrends code include:
-Some candidates' names were producing errors given that their name was not quite searchable due to an errant middle initial (we removed all middle initials after a point)
-Some candidates share names with other far more famous people, for example. James Woods
-Some candidates went by more common names/ nick names, for example. Hank Johnson for Henry R. Johnson
-A number of times we would get 429 errors for running the code far too many times, we implemented a sleep to remedy this however, sometimes even that would not work.
 
-Other general pytrends problems:
-We were not able to obtain city trends data that were usable, as even after setting the 'geo' as US we would just get a list that would just signify the proportion in the state that the two candidates were from given that they were not really being searched much out of their state as expected, thus we stuck to just using the interest_over_time function with the pytrends.
-
-We limited the candidates per state to the two top-most candidates based on who obtained approximately more than 17% of the vote. Some states had just one primary candidate based on this cut off, for example. Jeff Session in Alabama and so when using pytrends we input a dummy term 'All Others' 
 _____________________________________________
 
 Data Obtained
 The two key pieces of data we obtained through the data manipulation were the Percentage Searched, which was the proportion of total search obtained by that candidate with respect to his/her opponent from the Pytrends data and the Percentage of vote obtained from the FEC dataset.
+
+
+
+
+
+Other general pytrends problems:
+We were not able to obtain city trends data that were usable, as even after setting the 'geo' as US we would just get a list that would just signify the proportion in the state that the two candidates were from given that they were not really being searched much out of their state as expected, thus we stuck to just using the interest_over_time function with the pytrends.
