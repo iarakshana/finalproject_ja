@@ -39,14 +39,14 @@ by each candidate in any given congressional race. We would have to use a differ
 each election cycle but the datasets themselves are a bit more manageable.
 https://transition.fec.gov/pubrec/electionresults.shtml
 __________________________________________
-#Trending Into Office
+# Trending Into Office
  
 s;dkf;sldkfjlskdf;laskjdf;lksdlfj
 
-##Question
+## Question
 asdkjf;laskdjf;lksadjf;lksj
 
-##Index
+## Index
 
 The combined pytrend and FEC data as well as the graphs and statistical analysis can be found here:
 - 2014 Senate Correlation.ipynb
@@ -58,7 +58,7 @@ The combined pytrend and FEC data as well as the graphs and statistical analysis
 
 The pytrends code for both the House and Senate can be found in the Pytrends folder, and the code for the FEC data manipulation can be found in the FEC folder. 
 ____________________________________________
-##**Pytrends Code** 
+## Pytrends Code
 For the pytrends code, we took the names of the candidates from the FEC dataset and formed a kw_list for each state which is required for the build_payload function to run and search the trends and return the results. We initially started by running two names from each state through their own pytrend code, (ie. running pytrends for AK and then AL and then appending the two numbers obtained for each person), but soon found it to be extremely tedious to do so and knew that this would be even worse for the House Code. Hence, we created a for loop that would run through the entire list of candidates in each of the states and create a list which we converted to a dataframe with a column for the index and the percentage of searches obtained. We began using this method after 2014 and 2012 Senate had already been completed, which is why these two have code that looks substantially different. 
 
 A few problems we ran into while running the pytrends code include:
@@ -68,7 +68,7 @@ A few problems we ran into while running the pytrends code include:
 - Some candidates went by more common names/ nick names, for example: Hank Johnson for Henry R. Johnson, Buddy Carter for E. L. Carter, etc. 
 - A number of times we would get 429 errors for running the code far too many times, we implemented a sleep to remedy this but sometimes even that would not work.
 
-##FEC Code
+## FEC Code
 For the FEC datasets, we filtered out all but the top two candidates for each race to avoid exhausting pytrends searches and our own energy. Initially this meant using a cutoff of around 17% for each Senate race but once we began using the for-loops we had to stop using cutoffs since there were some races that only had one candidate and we needed to add in some placeholder who got 0% of the vote. 
 This meant that every candidate who we didn't want included in our analysis had to be deleted from the dataset. 
 
