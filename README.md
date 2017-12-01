@@ -1,4 +1,4 @@
-# Final Project - Julia and Adriana
+# Trending Into Office 
 
 Proposal Question
 
@@ -39,7 +39,7 @@ by each candidate in any given congressional race. We would have to use a differ
 each election cycle but the datasets themselves are a bit more manageable.
 https://transition.fec.gov/pubrec/electionresults.shtml
 __________________________________________
-# Trending Into Office
+# Project 
 
 ## Question
 We wanted to test whether or not being searched on Google more than your opponent would translate into a higher percentage of the vote in the next election. We did this by analyzing Google trend data for each candidate in the period from January 1st to Election Day of the year they ran for office. We then calculated the relative amount of internet searches for each candidate compared to their opponent. This trend data was a proxy for the relative amount of online interest in any given candidate in the months leading up to the election. We then compared this with the relative percent of the vote received by each candidate to determine whether or not there was a correlation between the amount of online interest and the percent of the vote received. 
