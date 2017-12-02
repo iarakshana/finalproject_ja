@@ -1,6 +1,8 @@
 # Trending Into Office 
 
-**Proposal Question**
+# Proposal
+
+**Question**
 
 We want to explore the relationship between a candidate’s online presence (here represented
 by Google Trend data) and the actual percentage of the vote received by each candidate.
