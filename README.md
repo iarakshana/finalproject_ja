@@ -57,7 +57,7 @@ The combined pytrend and FEC data as well as the graphs and statistical analysis
 - 2012 House Correlation.ipynb
 - 2010 House Correlation.ipynb
 
-The pytrends code for both the House and Senate can be found in the Pytrends folder, and the code for the FEC data manipulation can be found in the FEC folder. 
+The pytrends code for both the House and Senate can be found in their respective folders, and the code for the FEC data manipulation can be found in the FEC folder. 
 ____________________________________________
 ## Pytrends 
 The pytrends code gave us the frequency of searches for any given pair of candidates we input in our list on an index of 100, i.e. how much the particular candidate is searched relative to the total search-volume of both candidates over the period of time requested.
