@@ -138,6 +138,14 @@ As there was no strong correlation, we didn't plot the residuals for all years b
 
 
 <p align="center">
+2010 House Correlation
+</p>
+
+<p align="center">
+  <img width="400" height="300" src="https://github.com/iarakshana/finalproject_ja/blob/master/2010himg.png">
+</p>
+
+<p align="center">
 2012 House Correlation
 </p>
 
@@ -174,7 +182,7 @@ We also wanted to investigate the change in vote and internet percentage for can
 </p>
 
 <p align="center">
-  <img width="400" height="300" src="https://github.com/iarakshana/finalproject_ja/blob/master/2012_repeats.png">
+  <img width="400" height="350" src="https://github.com/iarakshana/finalproject_ja/blob/master/2012_repeats.png">
 </p>
 
 
