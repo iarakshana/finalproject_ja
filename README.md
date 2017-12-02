@@ -103,11 +103,23 @@ After plotting the residuals we noticed that they were not at all clustered arou
 In every year, there were a few cases where the losing candidate shared a name with a popular figure and thus skewed the pytrends data significantly (as mentioned in the pytrends code section). This meant that we got several losing candidates with abnormally high search percentages which undoubtedly contributed to some of the outliers in our data. There were also cases where the losing candidate was popular in their own right as a business owner or philanthropist. These also contributed to the outliers and made our analysis less robust. 
 
 <p align="center">
+2010 Senate Correlation
+</p>
+
+<p align="center">
   <img width="400" height="300" src="https://github.com/iarakshana/finalproject_ja/blob/master/2010simg.png">
 </p>
 
 <p align="center">
+2012 Senate Correlation
+</p>
+
+<p align="center">
   <img width="400" height="300" src="https://github.com/iarakshana/finalproject_ja/blob/master/2012simg.png">
+</p>
+
+<p align="center">
+2014 Senate Correlation
 </p>
 
 <p align="center">
@@ -121,19 +133,25 @@ We started by performing the same analysis on the 2014 House race. Since there w
 
 As there was no strong correlation, we didn't plot the residuals for all years but based on the 2014 plot it is safe to say that we can't conclude much about the relationship between percent searched and percent of the vote earned. There were several candidates who were not searched at all (likely because their name did not warrant a pytrends topic) and many others that were undersearched relative to the percentage of the vote they actually received. It makes sense that this sort of analysis would work better in the Senate than in the House; Senate candidates must appeal to the entire state and thus must rely much more heavily on people searching for them while many House races solely rely on the opposing party not fielding a threatening candidate. 
 
+<p align="center">
 2010 House Correlation
+</p>
 
 <p align="center">
   <img width="400" height="300" src="https://github.com/iarakshana/finalproject_ja/blob/master/2010himg.png">
 </p>
 
+<p align="center">
 2012 House Correlation
+</p>
 
 <p align="center">
   <img width="400" height="300" src="https://github.com/iarakshana/finalproject_ja/blob/master/2012himg.png">
 </p>
 
+<p align="center">
 2014 House Correlation
+</p>
 
 <p align="center">
   <img width="400" height="300" src="https://github.com/iarakshana/finalproject_ja/blob/master/2014himg.png">
@@ -141,21 +159,14 @@ As there was no strong correlation, we didn't plot the residuals for all years b
 
 
 
-
-
-
-**Repeated Candidates**
-bla bla bla bla bla bla bla bla 
-
-2014 Repeats
 <p align="center">
-  <img width="400" height="350" src="https://github.com/iarakshana/finalproject_ja/blob/master/2014_repeats.png">
+  <img width="400" height="300" src="https://github.com/iarakshana/finalproject_ja/blob/master/2014_repeats.png">
 </p>
 
 
-2012 Repeats
+
 <p align="center">
-  <img width="400" height="350" src="https://github.com/iarakshana/finalproject_ja/blob/master/2012_repeats.png">
+  <img width="400" height="300" src="https://github.com/iarakshana/finalproject_ja/blob/master/2012_repeats.png">
 </p>
 
 ____________________________________________________________
