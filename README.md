@@ -1,3 +1,4 @@
+
 # Trending Into Office 
 
 # Proposal
@@ -54,6 +55,7 @@ The combined pytrend and FEC data as well as the graphs and statistical analysis
 - 2010 Senate Correlation.ipynb
 - 2014 House Correlation.ipynb
 - 2012 House Correlation.ipynb
+- 2010 House Correlation.ipynb
 
 The pytrends code for both the House and Senate can be found in the Pytrends folder, and the code for the FEC data manipulation can be found in the FEC folder. 
 ____________________________________________
@@ -87,12 +89,10 @@ Another complication was that a number of times we would get 429 errors for acce
 _____________________________________
 ## Analysis 
 
+All analysis for Senate and House races can be found in the Correlations folder under the notebooks for each respective year. The primary functions used were pytrends, pandas, seaborn, and statsmodels.
+
 ### Senate
 
-
-All analysis for Senate races can be found in the Correlation notebooks for each respective year. The primary functions used were pytrends, pandas, seaborn, and statsmodels. 
-
-**Comparison By Year**
 
 We started our analysis with the 2014 Senate election. We wanted to see if the correlation between trend percentage and percent of the vote was strongest in the later election or in the earlier elections. We started out by making a multiple bar plot to observe whether or not there was some similarity between the percent of the vote and the percent searched. After verifying that there was in most cases, we plotted the overall correlation between the two variables. We then performed an OLS regression and observed the residuals. All graphs can be found in the Jupyter notebooks for each year. 
 
@@ -162,8 +162,11 @@ ____________________________________________________
 
 We also wanted to investigate the change in vote and internet percentage for candidates who were consistently running for office. We merged the FEC datasets to look at all the candidates who ran in all three years (Merged FEC) and from those selected a few interesting candidates, mostly those who had either gained or lost a significant percentage of the vote between 2012 and 2014. Out of the five candidates we selected, three main cases emerged: 
 
+
 - The Invisible Incumbent: These are candidates like Trey Gowdy and Richard L. Hanna who started off winning by a narrow margin but eventually were able to win the 2014 election with over 80% of the vote. Although both of these candidates earned much more of the vote in 2014 than in 2012, both of them were searched much less. This decrease in internet search paired with an increase in the vote suggests what we'd like to call the 'Bobby Rush effect'- incumbents become so entrenched that everyone in their district already knows who they are and thus doesn't need to search for them every two years when they are up for reelection. After a given point, incumbents have so much name recognition that people choose to search for their challenger instead, leading to a decrease in google searches for the incumbent but not a decrease in the percent of the vote that incumbent inevitably receives. 
+
 - The Runner Up: These are candidates like Nan Hayworth and Dan Sebring who ran and lost in all three races and got less of the vote in 2014 than they did in 2012. These candidates also were searched less in 2014 than they were in 2012. This suggests that even though the candidates ran year after year, they simply couldn't get the same level of interest as their opponent and in fact got less interest in later races. This implies that being searched less, either due to a more popular opponent or a lack of resources, does not bode well for a runner-up. While these were the only losing candidates we could find that ran in all three years, it is probably safe to conclude that if a candidate runs year after year and gets less and less attention each time, that candidate will probably get less and less of the vote. 
+
 - The John Boehner: This was a particularly interesting case. In 2012 John Boehner had recently been elected Speaker of the House and won his district with nearly 100% of the vote. In 2014, however, he squeaked by with a little over 60%. While the percent of the vote he receieved decreased, the percent of internet searches relative to his opponents increased. While he was being searched more and more, he somehow managed to get less popular within his own district. This was likely due to the fact that a lot of people around the country were searching for John Boehner but that did not translate into increased popularity in his home state of Ohio. There are likely other candidates such as current Speaker of the House Paul Ryan who may see an increase in searches without a matching increase in the vote simply because they are becoming more popular on the national stage without necessarily doing anything to make themselves more popular back home. 
 
 <p align="center">
