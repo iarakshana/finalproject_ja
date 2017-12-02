@@ -102,6 +102,8 @@ After plotting the residuals we noticed that they were not at all clustered arou
 
 In every year, there were a few cases where the losing candidate shared a name with a popular figure and thus skewed the pytrends data significantly (as mentioned in the pytrends code section). This meant that we got several losing candidates with abnormally high search percentages which undoubtedly contributed to some of the outliers in our data. There were also cases where the losing candidate was popular in their own right as a business owner or philanthropist. These also contributed to the outliers and made our analysis less robust. 
 
+
+
 <p align="center">
 2010 Senate Correlation
 </p>
@@ -129,7 +131,7 @@ In every year, there were a few cases where the losing candidate shared a name w
 
 ### House 
 
-We started by performing the same analysis on the 2014 House race. Since there were so many more races and so many more chances for candidates not to show up in Google Trends, it was not surprising when our graph wasn't quite as clean. For the 2014 House race there was actually a negative and incredibly weak correlation between percent searched and the percent of the vote received by each candidate. For 2012 there was a slightly positive yet still very weak correlation between the two variables. One possible explanation for the 2014 correlation being slightly negative would be that 2014 was the year when Republicans gained several seats in the House, defeating a decent amount of incumbents. Of course, a more likely reason for such a strange correlation would be that pytrends did not recognize a larger number of names from House races since the losers of these races are more likely to be unknown to the world wide web. 
+We started by performing the same analysis on the 2014 House race. Since there were so many more races and so many more chances for candidates not to show up in Google Trends, it was not surprising when our graph wasn't quite as clean. For the 2014 House race there was actually a negative and incredibly weak correlation between percent searched and the percent of the vote received by each candidate. For 2012 there was a slightly positive yet still very weak correlation between the two variables. In 2010, on the other hand, there was a statistically significant (yet still weak) positive correlation between the variables. One possible explanation for this change in correlation from slightly negative to slightly positive would be that candidates were starting to pay more attention to increasing their online presence as online advertising became more effective. Of course, a more likely reason for such a strange correlation would be that pytrends did not recognize a larger number of names from House races since the losers of these races are more likely to be unknown to the world wide web. 
 
 
 As there was no strong correlation, we didn't plot the residuals for all years but based on the 2014 plot it is safe to say that we can't conclude much about the relationship between percent searched and percent of the vote earned. There were several candidates who were not searched at all (likely because their name did not warrant a pytrends topic) and many others that were undersearched relative to the percentage of the vote they actually received. It makes sense that this sort of analysis would work better in the Senate than in the House; Senate candidates must appeal to the entire state and thus must rely much more heavily on people searching for them while many House races solely rely on the opposing party not fielding a threatening candidate. 
@@ -151,7 +153,7 @@ As there was no strong correlation, we didn't plot the residuals for all years b
   <img width="400" height="300" src="https://github.com/iarakshana/finalproject_ja/blob/master/2014himg.png">
 </p>
 
-We were hoping to do the 2010 House as well but Google trends was not cooperating.
+
 
 ____________________________________________________
 
