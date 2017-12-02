@@ -108,11 +108,16 @@ We started by performing the same analysis on the 2014 House race. Since there w
 
 As there was no strong correlation, we didn't plot the residuals for all years but based on the 2014 plot it is safe to say that we can't conclude much about the relationship between percent searched and percent of the vote earned. There were several candidates who were not searched at all (likely because their name did not warrant a pytrends topic) and many others that were undersearched relative to the percentage of the vote they actually received. It makes sense that this sort of analysis would work better in the Senate than in the House; Senate candidates must appeal to the entire state and thus must rely much more heavily on people searching for them while many House races solely rely on the opposing party not fielding a threatening candidate. 
 
+2012 Repeats 
 ![alt tag](https://github.com/iarakshana/finalproject_ja/blob/master/2012_repeats.png)
-**2012 Repeats**
 
+
+
+
+
+2014 Repeats
 ![alt tag](https://github.com/iarakshana/finalproject_ja/blob/master/2014_repeats.png)
-**2014 Repeats**
+
 
 ____________________________________________________________
 ## Conclusions
