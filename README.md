@@ -64,10 +64,11 @@ In order to obtain the variables we required, we created a for loop to sum these
 For the pytrends code, we took the names of the candidates from the FEC dataset and formed a kw_list for each state which is required for the build_payload function to run and search the trends and return the results. We initially started by running two names from each state through their own pytrend code, (ie. running pytrends for AK and then AL and then appending the two numbers obtained for each person), but soon found it to be extremely tedious to do so and knew that this would be even worse for the House Code. Hence, we created a for loop that would run through the entire list of candidates in each of the states and create a list which we converted to a dataframe with a column for the index and the percentage of searches obtained. We began using this method after 2014 and 2012 Senate had already been completed, which is why these two have code that looks substantially different. 
 
 A few problems we ran into while running the pytrends code include:
-- Inputting the names into the list in the appropriate format as an array with the brackets and the quotes was also quite a task initially when we attempted to do it manually. We then just assigned a string with the names and used the replace function to add the brackets and quotes.
+
 - Some candidates' names were producing errors given that their name was not quite searchable due to an errant middle initial (we removed all middle initials after a point).
-- Some candidates share names with other far more famous people, for example: James Woods, Tom Smith, etc. 
-- Some candidates went by more common names/ nick names, for example: Hank Johnson for Henry R. Johnson, Buddy Carter for E. L. Carter, etc. 
+- Inputting the names into the list in the appropriate format as an array with the brackets and the quotes was also quite a task initially when we attempted to do it manually. We then just assigned a string with the names and used the replace function to add the brackets and quotes.
+- Some candidates share names with other far more famous people, for example: James Woods, Adam Smith, etc. 
+- Some candidates went by more common names/nick names, for example: Hank Johnson for Henry R. Johnson, Buddy Carter for E. L. Carter, etc. 
 
 ## FEC Code
 The FEC dataset was a relatively nice way to get the percent of the vote received by any given candidate. The data was provided in the form of an excel spreadsheet which was easier to use than some of the other voter data we encountered. Unfortunately, we couldn't find data for 2016 on the FEC website so we limited our analysis to the previous three elections. 
@@ -127,6 +128,7 @@ In every year, there were a few cases where the losing candidate shared a name w
 
 
 ### House 
+
 We started by performing the same analysis on the 2014 House race. Since there were so many more races and so many more chances for candidates not to show up in Google Trends, it was not surprising when our graph wasn't quite as clean. For the 2014 House race there was actually a negative and incredibly weak correlation between percent searched and the percent of the vote received by each candidate. For 2012 there was a slightly positive yet still very weak correlation between the two variables. One possible explanation for the 2014 correlation being slightly negative would be that 2014 was the year when Republicans gained several seats in the House, defeating a decent amount of incumbents. Of course, a more likely reason for such a strange correlation would be that pytrends did not recognize a larger number of names from House races since the losers of these races are more likely to be unknown to the world wide web. 
 
 
@@ -153,7 +155,10 @@ We were hoping to do the 2010 House as well but Google trends was not cooperatin
 
 ____________________________________________________
 
-#### Repeats
+#### Repeated Candidates
+
+
+We also wanted to determine the change in both vote and internet percentage for candidates who were consistently running for office. 
 
 <p align="center">
 2012 Repeats
