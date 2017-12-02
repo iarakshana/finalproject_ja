@@ -129,7 +129,9 @@ As there was no strong correlation, we didn't plot the residuals for all years b
 <p align="center">
   <img width="400" height="300" src="https://github.com/iarakshana/finalproject_ja/blob/master/2012_repeats.png">
 </p>
+
 ____________________________________________________________
+
 ## Conclusions
 Overall, we can conclude that despite not being extensive, there is some correlation between our two variables in question, however, it is not as positive as we had expected or hoped. This might be either due to the outliers skewing the analysis or the changes in the search terms and frequency over the years analyzed. As a candidate running for office, it is worthwhile to consider how often you are being searched online as candidates who are searched more often generally outperform their opponents. However, this may not be the most effective way of guaranteeing an increased percent of the vote on Election Day. 
 
