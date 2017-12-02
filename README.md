@@ -157,16 +157,25 @@ As there was no strong correlation, we didn't plot the residuals for all years b
   <img width="400" height="300" src="https://github.com/iarakshana/finalproject_ja/blob/master/2014himg.png">
 </p>
 
+____________________________________________________
 
+#### Repeats
 
 <p align="center">
-  <img width="400" height="300" src="https://github.com/iarakshana/finalproject_ja/blob/master/2014_repeats.png">
+2012 Repeats
 </p>
-
-
 
 <p align="center">
   <img width="400" height="300" src="https://github.com/iarakshana/finalproject_ja/blob/master/2012_repeats.png">
+</p>
+
+
+<p align="center">
+2014 Repeats
+</p>
+
+<p align="center">
+  <img width="400" height="300" src="https://github.com/iarakshana/finalproject_ja/blob/master/2014_repeats.png">
 </p>
 
 ____________________________________________________________
