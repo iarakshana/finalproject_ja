@@ -141,14 +141,21 @@ As there was no strong correlation, we didn't plot the residuals for all years b
 
 
 
+
+
+
+**Repeated Candidates**
+bla bla bla bla bla bla bla bla 
+
+2014 Repeats
 <p align="center">
-  <img width="400" height="300" src="https://github.com/iarakshana/finalproject_ja/blob/master/2014_repeats.png">
+  <img width="400" height="350" src="https://github.com/iarakshana/finalproject_ja/blob/master/2014_repeats.png">
 </p>
 
 
-
+2012 Repeats
 <p align="center">
-  <img width="400" height="300" src="https://github.com/iarakshana/finalproject_ja/blob/master/2012_repeats.png">
+  <img width="400" height="350" src="https://github.com/iarakshana/finalproject_ja/blob/master/2012_repeats.png">
 </p>
 
 ____________________________________________________________
