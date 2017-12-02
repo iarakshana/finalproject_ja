@@ -54,7 +54,6 @@ The combined pytrend and FEC data as well as the graphs and statistical analysis
 - 2010 Senate Correlation.ipynb
 - 2014 House Correlation.ipynb
 - 2012 House Correlation.ipynb
-- 2010 House Correlation.ipynb
 
 The pytrends code for both the House and Senate can be found in the Pytrends folder, and the code for the FEC data manipulation can be found in the FEC folder. 
 ____________________________________________
@@ -133,13 +132,6 @@ We started by performing the same analysis on the 2014 House race. Since there w
 
 As there was no strong correlation, we didn't plot the residuals for all years but based on the 2014 plot it is safe to say that we can't conclude much about the relationship between percent searched and percent of the vote earned. There were several candidates who were not searched at all (likely because their name did not warrant a pytrends topic) and many others that were undersearched relative to the percentage of the vote they actually received. It makes sense that this sort of analysis would work better in the Senate than in the House; Senate candidates must appeal to the entire state and thus must rely much more heavily on people searching for them while many House races solely rely on the opposing party not fielding a threatening candidate. 
 
-<p align="center">
-2010 House Correlation
-</p>
-
-<p align="center">
-  <img width="400" height="300" src="https://github.com/iarakshana/finalproject_ja/blob/master/2010himg.png">
-</p>
 
 <p align="center">
 2012 House Correlation
@@ -156,6 +148,8 @@ As there was no strong correlation, we didn't plot the residuals for all years b
 <p align="center">
   <img width="400" height="300" src="https://github.com/iarakshana/finalproject_ja/blob/master/2014himg.png">
 </p>
+
+We were hoping to do the 2010 House as well but Google trends was not cooperating.
 
 ____________________________________________________
 
