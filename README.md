@@ -1,6 +1,6 @@
 # Trending Into Office 
 
-Proposal Question
+**Proposal Question**
 
 We want to explore the relationship between a candidate’s online presence (here represented
 by Google Trend data) and the actual percentage of the vote received by each candidate.
@@ -15,7 +15,7 @@ advantage regardless of online presence, this analysis could prove informative w
 candidates running multiple times in the same district who have to consider how much
 increasing their online presence will realistically increase their odds of being elected.
 
-Datasets Used
+**Datasets Used**
 
 Google Trends - Google Trends shows how often a particular search-term is entered relative to
 the total search-volume across various variables, including region, time and related queries. We
